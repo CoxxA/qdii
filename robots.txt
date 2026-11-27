@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://qdii.qinguanghui.com/sitemap.xml
+Sitemap: https://qdii-6gq.pages.dev/sitemap.xml
