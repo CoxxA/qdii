@@ -7,8 +7,8 @@
 [![Python](https://img.shields.io/badge/Python-3.12%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![无依赖](https://img.shields.io/badge/runtime%20deps-0-success)](scripts/build.py)
 
-**🔗 线上地址：<https://qdii.qinguanghui.com>** ·
-备用 <https://promise96319.github.io/qdii/>
+**🔗 线上地址：<https://qdii-6gq.pages.dev>** ·
+备用 <https://CoxxA.github.io/qdii/>
 
 ![页面截图](docs/assets/screenshot-dark.jpg)
 
