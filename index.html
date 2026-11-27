@@ -309,10 +309,15 @@ function bindSort() {
 
 load().then(d => {
   STATE.funds = d.funds;
-  const today = new Date().toISOString().slice(0, 10);
+  const BJ_OFFSET = 8 * 3600 * 1000;
+  const today = new Date(Date.now() + BJ_OFFSET).toISOString().slice(0, 10);
+  const dt = new Date(d.updated_at);
+  const updatedAt = Number.isNaN(dt.getTime())
+    ? String(d.updated_at || '')
+    : new Date(dt.getTime() + BJ_OFFSET).toISOString().slice(0, 19).replace('T', ' ');
   const staleWarn = d.date !== today
     ? ` <b style="color:var(--warn)">数据来自 ${d.date}，非今日</b>` : '';
-  document.getElementById('meta').innerHTML = `更新于 ${d.updated_at}${staleWarn}`;
+  document.getElementById('meta').innerHTML = `更新于 ${updatedAt}${staleWarn}`;
   render();
 }).catch(e => {
   document.getElementById('content').innerHTML =
